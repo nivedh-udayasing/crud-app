@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>One school</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css" />
   <link rel="stylesheet" href="{{asset('css/style.css')}}" />
 </head>
 
@@ -63,14 +64,16 @@
             <td>{{ $user->hostel }}</td>
             <td>{{ implode(', ', $user->subjects) }}</td>
             <td>{{ $user->address }}</td>
-            <td>
-                <a href="{{ route('users.edit', $user->id) }}">Edit</a>
-                <form action="{{ route('users.destroy', $user->id) }}" method="POST" style="display:inline">
-                    @csrf
-                    @method('DELETE')
-                    <button type="submit" onclick="return confirm('Are you sure you want to delete this user?')">Delete</button>
-                </form>
-            </td>
+            <div style="display: flex">
+              <td>
+                  <a  href="{{ route('users.edit', $user->id) }}"><i class="bi bi-pen">Edit</i></a>
+                  <form action="{{ route('users.destroy', $user->id) }}" method="POST">
+                      @csrf
+                      @method('DELETE')
+                      <button class="btn btn-danger" type="submit" onclick="return confirm('Are you sure you want to delete this user?')"><i class="bi bi-trash3"></i></button>
+                  </form>
+              </td>
+            </div>
         </tr>
         @endforeach
     </tbody>

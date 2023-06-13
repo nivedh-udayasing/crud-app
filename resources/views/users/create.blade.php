@@ -44,22 +44,22 @@
                     <div class="col-sm-12 col-md-6">
                         <label for="firstname" class="form-label">First Name<span class="text-danger">*</span></label>
                         <input class="form-control" type="text" name="firstname" id="firstname" value="{{ old('firstname') }}" required placeholder="Enter Student's First Name">
-                        <div class="invalid-feedback"></div>
+                        <div class="invalid-feedback">First name is required</div>
                     </div>
                     <div class="col-sm-12 col-md-6">
                         <label for="lastname" class="form-label">Last Name<span class="text-danger">*</span></label>
                         <input class="form-control" type="text" name="lastname" id="lastname" value="{{ old('lastname') }}" required placeholder="Enter Student's Last Name">
-                        <div class="invalid-feedback"></div>
+                        <div class="invalid-feedback">Last name is required</div>
                     </div>
                     <div class="col-sm-12 col-md-6">
                         <label for="mobile" class="form-label">Mobile<span class="text-danger">*</span></label>
                         <input class="form-control" type="text" name="mobile" id="mobile" value="{{ old('mobile') }}" required placeholder="Enter Parents's Mobile Number">
-                        <div class="invalid-feedback"></div>
+                        <div class="invalid-feedback">Mobile is required</div>
                     </div>
                     <div class="col-sm-12 col-md-6">
                         <label for="email" class="form-label">Email<span class="text-danger">*</span></label>
                         <input class="form-control" type="email" name="email" id="email" value="{{ old('email') }}" required placeholder="Enter Parents's Email ID">
-                        <div class="invalid-feedback"></div>
+                        <div class="invalid-feedback">Email is required</div>
                     </div>
                     <div class="col-sm-12 col-md-6">
                         <label for="branch" class="form-label">Branch<span class="text-danger">*</span></label>
@@ -69,7 +69,7 @@
                             <option value="electrical" {{ old('branch') == 'electrical' ? 'selected' : '' }}>Electrical</option>
                             <option value="mechanical" {{ old('branch') == 'mechanical' ? 'selected' : '' }}>Mechanical</option>
                         </select>
-                        <div class="invalid-feedback"></div>
+                        <div class="invalid-feedback">Branch is required</div>
                     </div>
                     <div class="col-sm-12 col-md-6">
                         <label class="form-label d-block" for="hostel">Needs Hostel Facility<span class="text-danger">*</span></label>
@@ -103,7 +103,7 @@
                     <div class="col-sm-12 col-md-6" >
                         <label class="form-label" for="address">Address</label>
                         <textarea class="form-control" cols="30" rows="5" name="address" id="address" placeholder="Enter your address" required>{{ old('address') }}</textarea>
-                        <div class="invalid-feedback"></div>
+                        <div class="invalid-feedback">Address is required</div>
                     </div>
                         <div class="col-sm-12 col-md-6 offset-6 text-end">
                         <button class="btn btn-secondary btn-sm" type="reset">
