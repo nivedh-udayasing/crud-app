@@ -42,8 +42,7 @@
 <table class="table">
     <thead>
         <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
+            <th>Name</th>
             <th>Mobile</th>
             <th>Email</th>
             <th>Branch</th>
@@ -56,8 +55,8 @@
     <tbody>
         @foreach($users as $user)
         <tr>
-            <td>{{ $user->firstname }}</td>
-            <td>{{ $user->lastname }}</td>
+            <td>{{ $user->firstname }}.{{$user->lastname}}</td>
+            {{-- <td>{{ $user->lastname }}</td> --}}
             <td>{{ $user->mobile }}</td>
             <td>{{ $user->email }}</td>
             <td>{{ $user->branch }}</td>
